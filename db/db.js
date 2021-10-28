@@ -4,7 +4,8 @@ const database = require('knex')(development) // ????
 module.exports = {
   getAllPizza,
   getPizza,
-  addOrder
+  addOrder,
+  getOrderList
 }
 
 
@@ -24,3 +25,7 @@ function addOrder(newObj, db= database){
   .insert(newObj)
 }
 
+function getOrderList(db =database){
+  return db("orders")
+  .select()
+}
