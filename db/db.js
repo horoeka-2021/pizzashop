@@ -5,7 +5,11 @@ module.exports = {
   getAllPizza,
   getPizza,
   addOrder,
-  getOrderList
+  getOrderList,
+  getOrderDetails,
+  updateOrder,
+  capitalise,
+  deleteOrder
 }
 
 
@@ -20,12 +24,35 @@ function getPizza(id, db = database) {
     .select()
 }
 
-function addOrder(newObj, db= database){
+function addOrder(newObj, db = database) {
   return db('orders')
-  .insert(newObj)
+    .insert(newObj)
 }
 
-function getOrderList(db =database){
+function getOrderList(db = database) {
   return db("orders")
-  .select()
+    .select()
+}
+
+function getOrderDetails(id, db = database) {
+  return db('orders')
+    .where('id', id)
+    .select()
+}
+
+function updateOrder(id, obj, db = database) {
+  return db('orders')
+    .where('id', id)
+    .update(obj)
+}
+
+
+function capitalise(name) {
+  return name[0].toUpperCase() + name.substring(1)
+}
+
+function deleteOrder(id, db = database) {
+  return db('orders')
+    .where('id', id)
+    .delete()
 }
