@@ -19,34 +19,6 @@ html {
     background-size: cover;
   } */
 
-#pizza-bg {
-    background: url(./images/pizzamaking-small.jpg) no-repeat center center fixed; 
-    min-height: 100%;
-    min-width: 1024px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  
-    /* Set up proportionate scaling */
-    width: 100%;
-    height: auto;
-  
-    /* Set up positioning */
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-
-  }
-  
-  @media screen and (max-width: 1024px) { /* Specific to this particular image */
-    img.bg {
-      left: 50%;
-      margin-left: -512px;   /* 50% */
-    }
-  }
-
 .title{
     font-family: 'Sacramento', cursive;
     color: white;
@@ -117,6 +89,7 @@ body {
     width: 500px;
     height: 500px;
     flex: 4;
+    flex-direction: column;
 }
 
 .pizza-details{
@@ -183,3 +156,108 @@ button:hover{
 @media (min-width: 1536px) {
 }
 
+#pizza-bg {
+  background: url(./images/pizzamaking-small.jpg) no-repeat center center fixed; 
+  min-height: 100%;
+  min-width: 1024px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+#pizza-bg2 {
+  background: url(./images/photo-1517686469429-8bdb88b9f907.jpg) no-repeat center center fixed; 
+  min-height: 100%;
+  min-width: 1024px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+#pizza-bg3 {
+  background: url(./images/photo-1532460734809-e7f8475ca917.jpg) no-repeat center center fixed; 
+  min-height: 100%;
+  min-width: 1024px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+/* .pizza-table {
+  background-color: white;
+  margin: 30px;
+  width: 70%;
+  height: auto;
+} */
+
+.pizza-details{
+  background-color: white;
+  margin: 30px;
+  width: 90%;
+  height: auto;
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 50px;
+}
+
+.form{
+ display: block;
+}
