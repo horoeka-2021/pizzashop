@@ -11,11 +11,11 @@
 	<body>
 		<div class="pizza-container" >		
 			<img id="pizza-bg" alt="">	
-			{{#each pizzas}}
+			{{#each result}}
 
 				<div class="pizza-list">
-					<a href="/pizza/{{id}}">
-						<img class="img-pizza" src="{{image}}" alt="{{name}}">
+					<a href="/{{id}}/order">
+						<img class="img-pizza" src="{{img}}" alt="{{name}}">
 						<button>Add</button>
 					</a>
 				</div>

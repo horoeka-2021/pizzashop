@@ -21,10 +21,10 @@
 				<h2>{{type}}</h2>
 				<div>Customer: {{description}}</div>
 
-					<form action="/list">
+					<form action="/{{id}}/order" method="post">
 
 						<label for="name">Customer Name</label>
-						<input type="text" id="name" name="customer_name" placeholder="Customere name..">
+						<input type="text" id="name" name="name" placeholder="Customere name..">
 
 						{{!-- <label for="Topping">Topping</label>
 						<select id="Topping" name="Topping">
@@ -34,11 +34,11 @@
 						</select> --}}
 
 						<label for="subject">Address</label>
-						<textarea id="subject" name="subject" placeholder="Write something.."
+						<textarea id="subject" name="address" placeholder="Write something.."
 							style="height:200px"></textarea>
 
 						<label for="name">Quantity</label>
-						<input type="text" id="name" name="customer_name" placeholder="Customere name..">
+						<input type="text" id="name" name="quantity" placeholder="Quantity">
 						{{!-- <input type="submit" value="Submit"> --}}
 						<button type="submit" value="Submit">Submit</button>
 

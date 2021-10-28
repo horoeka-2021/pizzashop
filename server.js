@@ -31,9 +31,9 @@ server.use('/', routes)
 
 server.use((req, res, next) => {
     clear()
-        // console.log('URL', req.url);
-        // console.log('Parameters', req.params);
-        // console.log('Body', req.body);
+    console.log('URL', req.url);
+    console.log('Parameters', req.params);
+    console.log('Body', req.body);
     next();
 });
 
