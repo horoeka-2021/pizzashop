@@ -19,7 +19,7 @@ https://miro.com/app/board/o9J_lnLHO7c=/
 1. Create tests
 
 ## Development guide
-1. Clone the feature branch
+1. Clone the dev branch
 1. Run `npm i`
 1. Run `npm knex migrate:latest`
 1. Run `npm knex seed:run`
