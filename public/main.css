@@ -89,6 +89,7 @@ body {
     width: 500px;
     height: 500px;
     flex: 4;
+    flex-direction: column;
 }
 
 .pizza-details{
@@ -239,9 +240,24 @@ button:hover{
   }
 }
 
-.pizza-table {
+/* .pizza-table {
   background-color: white;
   margin: 30px;
   width: 70%;
   height: auto;
+} */
+
+.pizza-details{
+  background-color: white;
+  margin: 30px;
+  width: 90%;
+  height: auto;
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 50px;
+}
+
+.form{
+ display: block;
 }
