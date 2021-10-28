@@ -38,7 +38,7 @@ server.use((req, res, next) => {
 });
 
 server.get('/', (req, res) => {
-    res.send("Working")
+    res.render("home")
         // res.redirect('/schedule/friday')
 })
 
