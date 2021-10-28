@@ -1,0 +1,86 @@
+ <html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86"/>
+    <link rel="stylesheet" href="/../public/rav
+    .css" />
+
+    <script src="/../public/quantitybutton.js"></script>
+    
+    <title>Order page</title>
+
+	</head>
+
+  <h3>
+        <div class="nav-item">
+      <a href="/">Home</a>
+      <a href="'/order">Order</a>
+      <a href="'/list">Summary</a>
+      <a href="'/order">Order Details</a>
+    </div>
+</h3>
+
+<body>
+  <section>
+    <form action="#" method="post">
+
+<fieldset>
+<legend>Customer details</legend>
+
+<div class="input">
+
+  <label for="customerName">Customer</label>
+  <input type="text" placeholder="Customer name" class="input" id="customerName" />
+  
+  <label for="customerAddress">Address</label>
+  <input type="text" placeholder="Delivery address" class="input" id="customerAddress" />
+  
+  <label for="customerPhoneNumber">Phone Number</label>
+  <input type="text" placeholder="Phone number" class="input" id="customerPhoneNumber" />
+  </div> 
+
+</fieldset>
+
+
+    
+<fieldset>
+  <legend>New order</legend>
+
+    <div class="input">
+
+    <label for="pizzaName">Pizza selection:</label>
+    <input type="text" placeholder="Pizza name" class="input" id="pizzaName"/>
+
+    <label for="customOrder">Comments</label>
+     <textarea name="customOrder" id="customOrder"></textarea>
+    </div> 
+
+  <div class="quantity">
+
+  <label for="name">Quantity</label>
+
+  </div>
+  </form>
+
+  <!quantity button>
+  <input id=demoInput type=number min=0 max=10>
+  <button onclick="increment()">+</button>
+  <button onclick="decrement()">-</button>
+  <script src="js/quantitybutton.js"></script>
+
+  </fieldset>
+
+
+ 
+
+<!order pizza button>
+<form method="post" action="/events/orderpizza" class="order-page">
+	  </div>
+    <div class ="buttons">
+      <input type="submit" value="Place order" id="submit">
+    </div>
+</div>
+
+</body>
