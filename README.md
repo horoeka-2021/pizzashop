@@ -22,7 +22,7 @@ https://miro.com/app/board/o9J_lnLHO7c=/
 1. Clone the feature branch
 1. Run `npm i`
 1. Run `npm run dev` to start the server 
-1. Run `npm knex migrate:lates`
+1. Run `npm knex migrate:latest`
 1. Run `npm knex seed:run`
 1. Go to http://localhost:3000 to see if the app is running properly
 1. Make a new branch named after your name
