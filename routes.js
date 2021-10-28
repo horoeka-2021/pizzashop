@@ -65,9 +65,9 @@ router.get('/list', (req, res) => {
   db.getOrderList()
     .then(result => {
       const orderObj = {
-        result: result
+        result:result
       }
-      // console.log(orderObj);
+      console.log(orderObj);
       res.render('list', orderObj)
       return null
     })

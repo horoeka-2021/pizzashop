@@ -27,5 +27,5 @@ function addOrder(newObj, db= database){
 
 function getOrderList(db =database){
   return db("orders")
-  .select
+  .select()
 }
