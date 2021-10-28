@@ -3,7 +3,7 @@ const db = require('./db/db')
 const router = express.Router()
 
 router.get('/home', (req, res) => {
-  // console.log('vimal-crystal');
+  
   db.getAllPizza()
     .then(result => {
       const pizzaObj = {
@@ -26,7 +26,7 @@ router.get('/:id/order', (req, res) => {
         result
       }
       // console.log(pizzaObj);
-      res.render('home', pizzaObj) // get the correct hbs page
+      res.render('order', pizzaObj) // get the correct hbs page
       return null
     })
     .catch(err => {
@@ -51,14 +51,34 @@ router.post('/:id/order', (req, res) => {
  
   db.addOrder(newOrder)
   .then(result=> {
-    console.log(result)
-    // res.redirect('home')
+    // console.log(result)
+    res.redirect('list')
     return null
   })
   .catch(err=> {
-    res.send('order has been placed')
+    res.send('Order unsuccessful')
   })
 })
+
+router.get('/list', (req, res) => {
+ 
+  db.getOrderList()
+    .then(result => {
+      const orderObj = {
+        result: result
+      }
+      // console.log(orderObj);
+      res.render('list', orderObj)
+      return null
+    })
+    .catch(err => {
+      res.send('unable to load the order list')
+    })
+})
+
+
+
+
 
 
 module.exports = router
