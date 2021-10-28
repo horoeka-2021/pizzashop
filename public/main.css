@@ -1,9 +1,91 @@
-body {
-    /* background-color: #FFCCCC; */
-    /* font-family: 'Spirax', cursive; */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap') */
+
+
+html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+  }
+
+  /* html { 
+    background: url(./images/pizzamaking-small.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  } */
+
+#pizza-bg {
+    background: url(./images/pizzamaking-small.jpg) no-repeat center center fixed; 
+    min-height: 100%;
+    min-width: 1024px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+  
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+  }
+  
+  @media screen and (max-width: 1024px) { /* Specific to this particular image */
+    img.bg {
+      left: 50%;
+      margin-left: -512px;   /* 50% */
+    }
+  }
+
+.title{
+    font-family: 'Sacramento', cursive;
+    color: white;
+    padding-top: 20px;
+    font-size: 55px;
+    text-align: center;
+
 }
 
-.container {
+body {
+    font-family:
+          system-ui,
+          -apple-system, /* Firefox supports this but not yet `system-ui` */
+          'Segoe UI',
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif,
+          'Apple Color Emoji',
+          'Segoe UI Emoji';
+  }
+  
+.nav {
+    text-align: center;
+    color: black;
+}
+
+  .nav-item {
+    z-index: 1;
+ }
+ 
+ .nav-item a{
+     text-decoration: none ;
+     color: orange;
+     margin: 10px 10px;
+     font-weight: 500;
+ }
+ 
+.pizza-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -15,33 +97,54 @@ body {
     align-items: center;
 }
 
-.puppy-list {
+
+.pizza-list {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 50px;
 }
 
-.puppy {
+.pizza {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    /* align-items: center; */
     margin: 50px;
 }
 
-.img-circle {
-    border-radius: 50%;
+.img-pizza {
     object-fit: cover;
-    width: 230px;
-    height: 230px;
+    width: 500px;
+    height: 500px;
+    flex: 4;
 }
 
-.title {
-    text-align: center;
+.pizza-details{
+    flex: 6;
 }
 
-.nav {
+button {
+    transition: all .5s ease;
+    cursor: pointer;
+    display: block;
+    border-radius: 40px;
+    background-color: transparent;
+    border: 3px solid orange;
+    color: orange;
+    border-width: 1px;
+    line-height: 1;
+    font-size: 17px;
+    padding: 10px 40px;
+    font-weight: 500;
     text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top:30px;
+}
+
+button:hover{
+    background-color: orange;
     color: black;
 }
 
@@ -64,3 +167,19 @@ body {
     padding: 6px 12px;
     cursor: pointer;
 }
+
+@media (min-width: 640px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1280px) {
+}
+
+@media (min-width: 1536px) {
+}
+

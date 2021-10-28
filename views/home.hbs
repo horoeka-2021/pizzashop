@@ -5,13 +5,25 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86"/>
 		<link rel="stylesheet" href="/../public/main.css" />
-		<title>Pear</title>
+		<title>Handmade Pizza</title>
 	</head>
 
 	<body>
-		<div class="game-container">
-			Working
+		<div class="pizza-container" >		
+			<img id="pizza-bg" alt="">	
+			{{#each pizzas}}
+
+				<div class="pizza-list">
+					<a href="/pizza/{{id}}">
+						<img class="img-pizza" src="{{image}}" alt="{{name}}">
+						<button>Add</button>
+					</a>
+				</div>
+			{{/each}}
 		</div>
+		<div>
+		<button>Place Order</button>
+	</div>
 	</body>
 
 </html>
