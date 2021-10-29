@@ -11,18 +11,17 @@
 <body>
 	<div class="pizza-container" >		
 			<img id="pizza-bg2" alt="">	
+	{{#each result}}
 	<div class="pizzas">
-		<img class="img-pizza" src="{{img}}" alt="{{type}}">
-
 		<div  class="pizza-table">
 		<h2>{{type}}</h2>
-		<div>Customer: {{description}}</div>
+		<div>Description: {{description}}</div>
 		<div>Customer: {{customer_name}}</div>
 		<div>Address: {{customer_address}}</div>
 		<div>Address: {{quantity}}</div>
-		<button>Submit</button>
+		<button>Update</button>
 		</div>
-
+	{{/each}}
 	</div>
 </div>
 </body>
