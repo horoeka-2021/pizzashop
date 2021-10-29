@@ -13,16 +13,15 @@
 		<img id="pizza-bg2" alt="">
 		<div class="pizzas">
 
-
-			<div class="pizza-details">
 				<img class="img-pizza" src="{{img}}" alt="{{type}}">
 
-				<div class="form">
-				<h2>{{type}}</h2>
-				<div>Description: {{description}}</div>
+				{{!-- <div class="form"> --}}
+			
 
-					<form action="/{{id}}/order" method="post">
+					<form class="pizza-order-form" action="/{{id}}/order" method="post">
+						<h2>{{type}}</h2>
 
+				<label>Description: {{description}}</label>
 						<label for="name">Customer Name</label>
 						<input type="text" id="name" name="name" placeholder="Customere name..">
 
@@ -44,7 +43,7 @@
 
 
 					</form>
-				</div>
+				{{!-- </div> --}}
 			</div>
 		</div>
 

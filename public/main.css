@@ -58,9 +58,12 @@ body {
  }
  
 .pizza-container {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; */
+    margin: 20px;
+    padding: 30px;
+    background-color: white;
 }
 
 .app {
@@ -77,23 +80,26 @@ body {
     margin: 50px;
 }
 
-.pizza {
+.pizzas {
     display: flex;
+
     flex-direction: row;
-    /* align-items: center; */
-    margin: 50px;
+    align-self: flex-start;
+
+    font-family: 'Roboto', sans-serif;
+    /* margin-top: 20px; */
 }
 
 .img-pizza {
     object-fit: cover;
     width: 500px;
-    height: 500px;
-    flex: 4;
-    flex-direction: column;
+    height: auto;
+    /* flex: 4; */
+    /* flex-direction: column; */
 }
 
 .pizza-details{
-    flex: 6;
+    /* flex: 6; */
 }
 
 button {
@@ -121,13 +127,13 @@ button:hover{
     color: black;
 }
 
-.form {
+/* .form {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'Roboto', sans-serif;
     margin-top: 20px;
-}
+} */
 
 
 /* input[type="file"] {
@@ -265,6 +271,15 @@ button:hover{
     margin: 50px;
 }
 
-.form{
- display: block; 
+.pizza-order-form{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ padding: 10px 20px;
+ width: 50%;
+
+}
+
+.pizza-order-form label {
+  margin: 15px 0px
 }
