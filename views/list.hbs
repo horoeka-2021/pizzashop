@@ -9,23 +9,23 @@
 </head>
 
 <body>
-	<div class="pizza-container" >		
-			<img id="pizza-bg2" alt="">	
-	{{#each result}}
-	<div class="pizzas">
-		<div  class="pizza-table">
-		<h2>Order ID: {{id}}</h2>
-		<div>Description: {{description}}</div>
-		<div>Customer: {{customerName}}</div>
-		<div>Address: {{customerAddress}}</div>
-		<div>Quantity: {{quantity}}</div>
-		<div>Status: {{status}}</div>
-		<button><a href="/{{id}}/delete">Delete</a></button>
-		<button><a href="/{{id}}/details">Update</a></button>
+	<div class="pizza-container">
+		<img id="pizza-bg2" alt="">
+		{{#each result}}
+		<div class="pizzas">
+			<div class="pizza-table">
+				<h2>Order ID: {{id}}</h2>
+				<div>Description: {{description}}</div>
+				<div>Customer: {{customerName}}</div>
+				<div>Address: {{customerAddress}}</div>
+				<div>Quantity: {{quantity}}</div>
+				<div>Status: {{status}}</div>
+				<button><a href="/{{id}}/delete">Delete</a></button>
+				<button><a href="/{{id}}/details">Update</a></button>
+			</div>
 		</div>
-	{{/each}}
+		{{/each}}
 	</div>
-</div>
 </body>
 
 </html>
