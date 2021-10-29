@@ -23,9 +23,9 @@ router.get('/:id/order', (req, res) => {
     db.getPizza(id)
         .then(result => {
             const pizzaObj = {
-                    result
-                }
-                // console.log(pizzaObj);
+                result
+            }
+            // console.log(pizzaObj);
             res.render('order', result) // get the correct hbs page
             return null
         })
@@ -79,13 +79,13 @@ router.get('/list', (req, res) => {
 router.get('/:id/details', (req, res) => {
     const id = Number(req.params.id)
 
-    db.getOrderDetails(id)
+    db.getOrderDetails(id) // ??
         .then(result => {
             const orderDetails = {
-                    result: result
-                }
-                // console.log(orderDetails);
-            res.render('home', orderDetails)
+                result: result
+            }
+            // console.log(orderDetails);
+            res.render('details', orderDetails)
             return null
         })
         .catch(err => {
@@ -102,7 +102,7 @@ router.post('/:id/details', (req, res) => {
     db.updateOrder(id, updateObj)
         .then(res => {
             console.log(res);
-            res.redirect('/home')
+            res.redirect('/list')
             return null
         })
         .catch(err => {
