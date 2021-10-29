@@ -141,6 +141,13 @@ button:hover{
     cursor: pointer;
 }
 
+.pizza-table{
+  background-color: white;
+  width: 1024px;
+  padding: 25px;
+  display: block;
+}
+
 @media (min-width: 640px) {
 }
 
@@ -259,5 +266,5 @@ button:hover{
 }
 
 .form{
- display: block;
+ display: block; 
 }

@@ -9,19 +9,10 @@
 </head>
 
 <body>
-	<div class="pizza-container">
-		<img id="pizza-bg2" alt="">
-		<div class="pizzas">
-
-
-			<div class="pizza-details">
-				<img class="img-pizza" src="{{img}}" alt="{{type}}">
-
-				<div class="form">
-				<h2>{{type}}</h2>
-				<div>Description: {{description}}</div>
-
-					<form action="/{{id}}/order" method="post">
+	<div class="pizza-container" >		
+			<img id="pizza-bg" alt="">	
+			{{#each result}}
+	<form action="/{{id}}/order" method="post">
 
 						<label for="name">Customer Name</label>
 						<input type="text" id="name" name="name" placeholder="Customere name..">
@@ -40,14 +31,13 @@
 						<label for="name">Quantity</label>
 						<input type="text" id="name" name="quantity" placeholder="Quantity">
 						{{!-- <input type="submit" value="Submit"> --}}
-						<button type="submit" value="Submit">Submit</button>
+						<button type="submit" value="Submit">Update</button>
 
 
 					</form>
-				</div>
-			</div>
-		</div>
-
+{{/each}}
+	</div>
+</div>
 </body>
 
 </html>
