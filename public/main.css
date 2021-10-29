@@ -1,17 +1,21 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
+
 /* @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap') */
 
-
 html {
-    line-height: 1.15; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
-  }
+    line-height: 1.15;
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+}
 
-  /* html { 
+
+/* html { 
     background: url(./images/pizzamaking-small.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -19,44 +23,35 @@ html {
     background-size: cover;
   } */
 
-.title{
+.title {
     font-family: 'Sacramento', cursive;
     color: white;
     padding-top: 20px;
     font-size: 55px;
     text-align: center;
-
 }
 
 body {
-    font-family:
-          system-ui,
-          -apple-system, /* Firefox supports this but not yet `system-ui` */
-          'Segoe UI',
-          Roboto,
-          Helvetica,
-          Arial,
-          sans-serif,
-          'Apple Color Emoji',
-          'Segoe UI Emoji';
-  }
-  
+    font-family: system-ui, -apple-system, /* Firefox supports this but not yet `system-ui` */
+    'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
 .nav {
     text-align: center;
     color: black;
 }
 
-  .nav-item {
+.nav-item {
     z-index: 1;
- }
- 
- .nav-item a{
-     text-decoration: none ;
-     color: orange;
-     margin: 10px 10px;
-     font-weight: 500;
- }
- 
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: orange;
+    margin: 10px 10px;
+    font-weight: 500;
+}
+
 .pizza-container {
     /* display: flex;
     flex-wrap: wrap;
@@ -71,7 +66,6 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
 
 .pizza-list {
     display: flex;
@@ -119,10 +113,10 @@ button {
     position: relative;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top:30px;
+    margin-top: 30px;
 }
 
-button:hover{
+button:hover {
     background-color: orange;
     color: black;
 }
@@ -147,111 +141,104 @@ button:hover{
     cursor: pointer;
 }
 
-.pizza-table{
-  background-color: white;
-  width: 1024px;
-  padding: 25px;
-  display: block;
+.pizza-table {
+    background-color: white;
+    width: 1024px;
+    padding: 25px;
+    display: block;
 }
 
-@media (min-width: 640px) {
-}
+@media (min-width: 640px) {}
 
-@media (min-width: 768px) {
-}
+@media (min-width: 768px) {}
 
-@media (min-width: 1024px) {
-}
+@media (min-width: 1024px) {}
 
-@media (min-width: 1280px) {
-}
+@media (min-width: 1280px) {}
 
-@media (min-width: 1536px) {
-}
+@media (min-width: 1536px) {}
 
 #pizza-bg {
-  background: url(./images/pizzamaking-small.jpg) no-repeat center center fixed; 
-  min-height: 100%;
-  min-width: 1024px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-
+    background: url(./images/pizzamaking-small.jpg) no-repeat center center fixed;
+    min-height: 100%;
+    min-width: 1024px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
-  img.bg {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-  }
+@media screen and (max-width: 1024px) {
+    /* Specific to this particular image */
+    img.bg {
+        left: 50%;
+        margin-left: -512px;
+        /* 50% */
+    }
 }
 
 #pizza-bg2 {
-  background: url(./images/photo-1517686469429-8bdb88b9f907.jpg) no-repeat center center fixed; 
-  min-height: 100%;
-  min-width: 1024px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-
+    background: url(./images/photo-1517686469429-8bdb88b9f907.jpg) no-repeat center center fixed;
+    min-height: 100%;
+    min-width: 1024px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
-  img.bg {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-  }
+@media screen and (max-width: 1024px) {
+    /* Specific to this particular image */
+    img.bg {
+        left: 50%;
+        margin-left: -512px;
+        /* 50% */
+    }
 }
 
 #pizza-bg3 {
-  background: url(./images/photo-1532460734809-e7f8475ca917.jpg) no-repeat center center fixed; 
-  min-height: 100%;
-  min-width: 1024px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-
+    background: url(./images/photo-1532460734809-e7f8475ca917.jpg) no-repeat center center fixed;
+    min-height: 100%;
+    min-width: 1024px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
-  img.bg {
-    left: 50%;
-    margin-left: -512px;   /* 50% */
-  }
+@media screen and (max-width: 1024px) {
+    /* Specific to this particular image */
+    img.bg {
+        left: 50%;
+        margin-left: -512px;
+        /* 50% */
+    }
 }
+
 
 /* .pizza-table {
   background-color: white;
@@ -260,16 +247,17 @@ button:hover{
   height: auto;
 } */
 
-.pizza-details{
-  background-color: white;
-  margin: 30px;
-  width: 90%;
-  height: auto;
-  display: flex;
+.pizza-details {
+    background-color: white;
+    margin: 30px;
+    width: 90%;
+    height: auto;
+    display: flex;
     flex-direction: row;
     align-items: center;
     margin: 50px;
 }
+
 
 .pizza-order-form{
  display: flex;
@@ -283,3 +271,18 @@ button:hover{
 .pizza-order-form label {
   margin: 15px 0px
 }
+
+.form {
+    display: block;
+}
+
+button a {
+    text-decoration: none;
+    color: orange;
+}
+
+h1 a {
+    text-decoration: none;
+    color: orange;
+}
+

@@ -3,7 +3,6 @@ const db = require('./db/db')
 const router = express.Router()
 
 router.get('/home', (req, res) => {
-
     db.getAllPizza()
         .then(result => {
             const pizzaObj = {
@@ -50,8 +49,8 @@ router.post('/:id/order', (req, res) => {
     }
 
     db.addOrder(newOrder)
-        .then(result => {
-            // console.log(result)
+        .then(noOfAffectedRows => {
+            console.log(noOfAffectedRows, ' records affected')
             res.redirect('/list')
             return null
         })
@@ -61,13 +60,12 @@ router.post('/:id/order', (req, res) => {
 })
 
 router.get('/list', (req, res) => {
-
     db.getOrderList()
         .then(result => {
             const orderObj = {
-                result: result
-            }
-            console.log(orderObj);
+                    result: result
+                }
+                // console.log(orderObj);
             res.render('list', orderObj)
             return null
         })
@@ -78,14 +76,13 @@ router.get('/list', (req, res) => {
 
 router.get('/:id/details', (req, res) => {
     const id = Number(req.params.id)
-
     db.getOrderDetails(id)
         .then(result => {
             const orderDetails = {
                     result: result
                 }
                 // console.log(orderDetails);
-            res.render('home', orderDetails)
+            res.render('details', result)
             return null
         })
         .catch(err => {
@@ -100,9 +97,9 @@ router.post('/:id/details', (req, res) => {
         status: status
     }
     db.updateOrder(id, updateObj)
-        .then(res => {
-            console.log(res);
-            res.redirect('/home')
+        .then((noOfAffectedRows) => {
+            console.log(noOfAffectedRows, ' records affected')
+            res.redirect('/list')
             return null
         })
         .catch(err => {
@@ -111,11 +108,11 @@ router.post('/:id/details', (req, res) => {
 
 })
 
-router.post('/delete', (req, res) => {
-    const id = Number(req.body.id)
+router.get('/:id/delete', (req, res) => {
+    const id = Number(req.params.id)
     db.deleteOrder(id)
-        .then(result => {
-            console.log(result);
+        .then(noOfAffectedRows => {
+            console.log(noOfAffectedRows, ' records affected')
             res.redirect('/list')
             return null
         })
@@ -123,10 +120,5 @@ router.post('/delete', (req, res) => {
             res.send('unable to delete order')
         })
 })
-
-
-
-
-
 
 module.exports = router
