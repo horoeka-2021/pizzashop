@@ -4,7 +4,7 @@ A group project for the Bitcoin team
 ## Deployment on Heroku
 https://pizzashop-dev.herokuapp.com/
 ## Software design in Miro
-https://miro.com/app/board/o9J_lnLHO7c=/
+https://miro.com/app/board/uXjVObAhp-U=/
 ## Main features
 1. Make an order of pizza
 1. Change the status of pizza orders
