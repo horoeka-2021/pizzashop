@@ -1,6 +1,7 @@
 # pizzashop
 A group project for the Bitcoin team
-![](screenshot.png)
+
+![](https://user-images.githubusercontent.com/68837083/145735808-5fd53e39-6e66-40b1-9f02-3631d06b1387.png)
 ## Deployment on Heroku
 https://pizzashop-dev.herokuapp.com/
 ## Software design in Miro
